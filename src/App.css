@@ -1,0 +1,35 @@
+
+
+  body{
+    background-image: url('../src/pics/background-home-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  
+  }
+    
+  
+  @media only screen and (max-width: 480px) {
+    body{
+      background-image: url('../src/pics/background-home-mobile.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+    }
+    }
+    
+    
+    
+    @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    body{
+        background-image: url('../src/pics/background-home-tablet.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+      }
+      
+  
