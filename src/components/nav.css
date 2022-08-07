@@ -1,0 +1,119 @@
+.header-bar{   
+  background: transparent;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  height: 80px;
+  }
+  .logo{
+    line-height: 80px;
+    font-size: 21px;     
+    float: left;
+    margin-left: 20px;
+  }
+  .menu ul{
+      display: flex;
+      flex-direction: row;
+      float: right;
+      list-style: none;
+      line-height: 80px;
+      }
+      .menu ul li{
+      margin: 0 20px;
+      }
+      .menu ul li a{
+        font-size: 20px;
+        color: #D0D6F9;
+        text-decoration: none;
+        }
+        .menu ul li a:hover{
+          color:#fff;
+        }
+        .menu ul li a:focus{
+          border-bottom: 4px solid #D0D6F9;
+          line-height: 2em;
+          
+
+
+
+        }
+          #toggle-btn{
+            display: none;
+          }
+          .menuicon{
+            cursor: pointer;
+            float: right;              
+            margin-right: 40px;
+            background: transparent;
+            width: 40px;
+            height: 40px; 
+            position: relative;  
+            margin-top: 20px;
+            display: none;
+          }
+          .bars{
+            content: " ";
+            background: #fff;
+            color: black;
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            line-height: 80px;
+            top: 20px;
+            }
+            .bars:before{
+            content: " ";
+            background: #fff;
+            color: black;
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 8px;
+            }
+              .bars:after{
+            content: " ";
+            background: #fff;
+            color: black;
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: -8px;
+            }
+            #toggle-btn:checked ~ .menuicon .bars{
+              background: transparent;
+               }
+             #toggle-btn:checked ~ .menuicon .bars:before{
+               transform: rotate(45deg);
+               top: 0;
+               }
+              #toggle-btn:checked ~ .menuicon .bars:after{
+               transform: rotate(-45deg);
+               top: 0;
+               }
+          /*--- Media Query -----*/
+          @media (max-width: 768px){
+            .menu ul{
+              flex-direction: column;
+              width: 100%;
+              left: 0;
+              top: 50px;
+              position: absolute;
+              background: transparent;
+              min-height: 50vh;
+              display: none;
+            }
+              .menu ul li{
+                margin: 5px 25px;
+                }
+                .menuicon{display: block;}
+         
+            #toggle-btn:checked ~ .menu ul{
+            display: block;
+          }    
+          
+        
+            
+          }
+          
+          
+        
