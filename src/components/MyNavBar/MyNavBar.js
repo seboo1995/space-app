@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import '../MyNavBar/nav.css'
-import logo from '../../pics/logo.svg'
+import logo from '../../assets/shared/logo.svg'
 import {Link} from "react-router-dom"
 export const MyNavBar = () => {
 
