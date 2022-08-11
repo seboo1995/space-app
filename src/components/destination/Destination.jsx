@@ -29,11 +29,6 @@ const Destination = () => {
 
 
     })
-    
-
-
-    e.currentTarget.style.opacity = 0.5    
-
    
   }
 
