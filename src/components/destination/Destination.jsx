@@ -18,7 +18,7 @@ const Destination = () => {
   return (
        <div className='destination-container'>
 
-    <h2> PICK YOUR DESTINATION </h2>
+    <h2> PICK YOUR DESTINATIONdsfggfdgdfgdfgfd </h2>
 
      <img src={imageSrc} /> 
 
