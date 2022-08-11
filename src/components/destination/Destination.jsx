@@ -1,30 +1,36 @@
 import {React,useState} from 'react'
 import './Destination.css'
 import myData from '../../assets/data.json';
-import moon from '../../assets/destination/image-moon.png'
 
 const Destination = () => {
-  const path  = '../../assets/destination'
   const all_destination = myData.destinations
-  console.log(all_destination)
+  const [imageSrc, setImageSrc] = useState(all_destination[0].images.png)
+  // console.log(all_destination)
+  const changeSrc = (e) => {
+    const t = all_destination.filter((obj) => {
+    if (e.currentTarget.textContent.toLowerCase().trim() ===  obj.name.toLowerCase().trim() ) {
+        return true
+    }})
+    
+    setImageSrc(t[0].images.png)   
+  }
 
-  // const [planet, setPlanet] = useState(all_destination[0].name)
-  const [planet_image, setPlanetImage] = useState("")
-
-  // src/assets/destination/image-moon.png
   return (
-       <div>
+       <div className='destination-container'>
 
     <h2> PICK YOUR DESTINATION </h2>
 
-     <img  src = {planet_image}/> 
-   {/* <img src={moon}/> */}
+     <img src={imageSrc} /> 
 
-    <ul>
-      <li onClick={() => {setPlanetImage(all_destination[0].images.png)}}> Moon </li>
+      <ul>
+        {all_destination.map((destination) => {
+        // return <li onClick={setImageSrc(`${path}+image-${destination.name}`)} > {destination.name} </li>
+          return <li onClick={ changeSrc} key={destination.name}> {destination.name}</li>
+        })}  
+      {/* <li> Moon </li>
       <li> Mars </li>
       <li> Titan  </li>
-      <li> Europa </li> 
+      <li> Europa </li>  */}
     </ul>
 
 
