@@ -37,7 +37,7 @@ const Destination = () => {
 
     <h2> PICK YOUR DESTINATION </h2>
      <img src={imageSrc} alt = 'asl' id='222'/> 
-
+    <h2> PICK YOUR DESTINATION </h2>
 
       <ul>
         {all_destination.map((destination) => {
