@@ -1,3 +1,10 @@
-body{
+.technology-container{
+    background-image: url(../../assets/technology/background-technology-desktop.jpg);
     color:#D0D6F9
+}
+
+
+
+.technology-container button:first-child {
+    opacity: 0.5;
 }

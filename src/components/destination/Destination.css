@@ -1,7 +1,12 @@
-body {
-background-image: url(../../assets/destination/background-destination-desktop.jpg);
+.destination-container{
+background: url(../../assets/destination/background-destination-desktop.jpg);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 height: 100%;
+
+}
+
+.destination-container button:first-child {
+    opacity: 0.5;
 }

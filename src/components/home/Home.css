@@ -1,0 +1,28 @@
+.home-container{
+    background: url(../../assets/home/background-home-desktop.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:#D0D6F9
+}
+h1{
+    color:#ffffff;
+    font-weight: bold;
+    font-size: 50px;
+}
+#exp-btn{
+    text-decoration: none;
+    align-items: center;
+    border-radius: 50%;
+    height: 190px;
+    width: 190px;
+    color:#0B0D17;
+    font-size: 28px;
+    transition: all 0.5s;
+}
+
+#exp-btn:hover{
+    transform:scale(1.5);
+    opacity:0.5;
+}

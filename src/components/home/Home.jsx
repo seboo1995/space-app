@@ -17,11 +17,11 @@ const Home = () => {
         </p>
         </div>
         <div>
-            <button id="exp-btn">
                 <Link to="/destination">
+                <button id="exp-btn">  
                 EXPLORE
+                </button>
                 </Link>
-            </button>
         </div>
     </div>
   )

@@ -43,8 +43,6 @@ const Destination = () => {
         {all_destination.map((destination) => {
           return (
             <button onClick={ changeSrc} key={destination.name} id={destination.name}> {destination.name}</button>
-
-            
           )
         })}  
     </ul>
