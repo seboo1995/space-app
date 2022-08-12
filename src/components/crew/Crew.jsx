@@ -1,7 +1,7 @@
 import React from 'react'
 import './Crew.css'
 import myData from "../../assets/data.json"
-import { useState } from 'react'
+import { useState,useRef } from 'react'
 
 const Crew = () => {
   const all_crew = myData.crew
@@ -9,7 +9,19 @@ const Crew = () => {
   const [role, setRole] = useState(all_crew[0].role)
   const [bio, setBio] = useState(all_crew[0].bio)
   const [crewname, setCrewName] = useState(all_crew[0].name)
-  const [counter, setCounter] = useState(0);
+  const crew_ref = useRef()
+  
+  const change_slide = (name) => {
+        console.log(document.getElementById(name))
+  }
+
+  for (const crew of all_crew) {
+   setInterval(change_slide(crew.name),2000)
+    
+  }
+
+
+
 
   const changeSrc = (e) => {
     const t = all_crew.filter((obj) => {
@@ -20,7 +32,7 @@ const Crew = () => {
     setBio(t[0].bio)
     setCrewName(t[0].name)
     setImageSrc(t[0].images.png)
-    setCounter(counter+1);
+
     
     all_crew.forEach((obj) => {
       
@@ -42,12 +54,11 @@ const Crew = () => {
     <h2>Meet your crew </h2>
      <img src={imageSrc} alt = 'asl' id='222'/> 
 
-      <ul>
+      <ul ref={crew_ref}>
         {all_crew.map((crew) => {
           return (
-
-           
             <button onClick={ changeSrc} key={crew.name} id={crew.name}> </button>
+
             
             
           )

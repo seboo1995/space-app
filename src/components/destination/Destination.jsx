@@ -1,4 +1,4 @@
-import {React,useState} from 'react'
+import {React,useState,useRef} from 'react'
 import './Destination.css'
 import myData from '../../assets/data.json';
 
@@ -8,7 +8,7 @@ const Destination = () => {
   const [desc, setDesc] = useState(all_destination[0].description)
   const [dist, setDist] = useState(all_destination[0].distance)
   const [travel, setTravel] = useState(all_destination[0].travel)
-
+  const list_items = useRef();
   
   const changeSrc = (e) => {
     const t = all_destination.filter((obj) => {
@@ -23,6 +23,7 @@ const Destination = () => {
       if (e.currentTarget.textContent.toLowerCase().trim() === obj.name.toLowerCase().trim()) {
           document.getElementById(obj.name).style.opacity = 0.5
       }
+      // this should be changed when refactoring
       else {
         document.getElementById(obj.name).style.opacity = 1
       }
@@ -39,10 +40,12 @@ const Destination = () => {
      <img src={imageSrc} alt = 'asl' id='222'/> 
     <h2> PICK YOUR DESTINATION </h2>
 
-      <ul>
+      <ul ref = {list_items}>
         {all_destination.map((destination) => {
           return (
-            <button onClick={ changeSrc} key={destination.name} id={destination.name}> {destination.name}</button>
+            <button onClick={changeSrc} key={destination.name} id={destination.name}> {destination.name}</button>
+
+            
           )
         })}  
     </ul>
