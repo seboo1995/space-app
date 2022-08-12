@@ -2,72 +2,50 @@ import React from 'react'
 import './Crew.css'
 import myData from "../../assets/data.json"
 import { useState,useRef } from 'react'
+import { useEffect } from 'react'
 
 const Crew = () => {
   const all_crew = myData.crew
-  const [imageSrc, setImageSrc] = useState(all_crew[0].images.png)
-  const [role, setRole] = useState(all_crew[0].role)
-  const [bio, setBio] = useState(all_crew[0].bio)
-  const [crewname, setCrewName] = useState(all_crew[0].name)
+  const [currentPersonID, setCurrentPersonID] = useState(0);
   const crew_ref = useRef()
-  
-  const change_slide = (name) => {
-        console.log(document.getElementById(name))
-  }
 
-  for (const crew of all_crew) {
-   setInterval(change_slide(crew.name),2000)
-    
-  }
+  useEffect(function(){
+     const intervalRef =  setInterval(function(){
+      let nextIndex =  (( currentPersonID+ 1) % 4)
+      changeSrc(nextIndex)
 
+     },2000)
 
+      return () => clearInterval(intervalRef)
+  },[currentPersonID])
 
-
-  const changeSrc = (e) => {
-    const t = all_crew.filter((obj) => {
-    if (e.currentTarget.id.toLowerCase().trim() ===  obj.name.toLowerCase().trim() ) {
-        return true
-    }})
-    setRole(t[0].role)
-    setBio(t[0].bio)
-    setCrewName(t[0].name)
-    setImageSrc(t[0].images.png)
-
-    
-    all_crew.forEach((obj) => {
+   function changeSrc(index) {
+    setCurrentPersonID(index);
+    for (const btn of crew_ref.current.children) {
+     
+   btn.style.opacity = 1;
       
-      if (e.currentTarget.id.toLowerCase().trim() === obj.name.toLowerCase().trim()) {
-          document.getElementById(obj.name).style.opacity = 0.5
-      }
-      else {
-        document.getElementById(obj.name).style.opacity = 1
-      }
-
-
-    })
-   
+    }
+    crew_ref.current.children[index].style.opacity = 0.5;   
   }
 
   return (
     <div className='crew-container'>
 
     <h2>Meet your crew </h2>
-     <img src={imageSrc} alt = 'asl' id='222'/> 
+     <img src={all_crew[currentPersonID].images.png} alt = 'asl' id='222'/> 
 
       <ul ref={crew_ref}>
-        {all_crew.map((crew) => {
+        {all_crew.map((crew,index) => {
           return (
-            <button onClick={ changeSrc} key={crew.name} id={crew.name}> </button>
-
-            
-            
+            <button onClick={()=> changeSrc(index)} key={crew.name} id={crew.name}> </button>
           )
         })}  
     </ul>
-    <p> {bio}</p>
-    <h3> {role}</h3>
+    <p> {all_crew[currentPersonID].bio}</p>
+    <h3> {all_crew[currentPersonID].role}</h3>
     <br></br>
-    <h3>{crewname}</h3>
+    <h3>{all_crew[currentPersonID].name}</h3>
     </div>
   )
 }
