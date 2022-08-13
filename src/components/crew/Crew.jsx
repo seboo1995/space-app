@@ -19,6 +19,17 @@ const Crew = () => {
       return () => clearInterval(intervalRef)
   },[currentPersonID])
 
+  useEffect(()  => {
+    document.body.classList.add('crew-container');
+
+    return () => {
+        document.body.classList.remove('crew-container');
+    };
+});
+
+
+
+
    function changeSrc(index) {
     setCurrentPersonID(index);
     for (const btn of crew_ref.current.children) {
@@ -30,7 +41,7 @@ const Crew = () => {
   }
 
   return (
-    <div className='crew-container'>
+    <div>
 
     <h2>Meet your crew </h2>
      <img src={all_crew[currentPersonID].images.png} alt = 'asl' id='222'/> 
