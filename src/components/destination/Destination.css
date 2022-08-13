@@ -1,12 +1,47 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
+    .destination-container{
+       background: url(../../assets/destination/background-destination-mobile.jpg);
+ 
+    }
+ }
+ @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
+    .destination-container{
+       background: url(../../assets/destination/background-destination-desktop.jpg);
+    }
+ 
+ }
+ @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
+    .destination-container{
+       background: url(../../assets/destination/background-destination-tablet.jpg);
+    }
+ }
 .destination-container{
 background: url(../../assets/destination/background-destination-desktop.jpg);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 height: 100%;
+display: grid;
 
 }
 
 .destination-container button:first-child {
+    opacity: 1;
+}
+.destination-container button:nth-child(2){
     opacity: 0.5;
 }
+.destination-container button:nth-child(3){
+    opacity: 0.5;
+}
+.destination-container button:nth-child(4){
+    opacity: 0.5;
+}
+
+.destination-container p {
+    color:#D0D6F9
+}
+.destination-container h3, h2{
+    color:#ffffff
+}
+

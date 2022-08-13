@@ -1,15 +1,40 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
+    .crew-container{
+       background: url(../../assets/crew/background-crew-mobile.jpg);
+ 
+    }
+ }
+ @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
+    .crew-container{
+       background: url(../../assets/crew/background-crew-desktop.jpg);
+    }
+ 
+ }
+ @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
+    .crew-container{
+       background: url(../../assets/crew/background-crew-tablet.jpg);
+    }
+ }
 .crew-container {
-    background-image: url(../../assets/crew/background-crew-desktop.jpg);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    color:#D0D6F9
+    color:#D0D6F9;
     }
 .crew-container button:first-child {
-        opacity: 0.5;
-       
+    opacity: 1;
 }
+.crew-container button:nth-child(2){
+    opacity: 0.5;
+}
+.crew-container button:nth-child(3){
+    opacity: 0.5;
+}
+.crew-container button:nth-child(4){
+    opacity: 0.5;
+}
+
 .crew-container button{
     width: 20px;
     height:20px;
@@ -17,4 +42,26 @@
     display: inline-block;
     margin: 5px;
     padding: 2px;
+}
+
+.crew-container p{
+    color:#D0D6F9;
+    padding:2px;
+    margin: 2px;
+    width: 500px;
+}
+
+.crew-container #role-text{
+    opacity: 0.4;
+}
+
+.crew-container h1{
+    font-size: 25px;
+    text-transform:uppercase;
+    letter-spacing: 4.75;
+}
+.crew-container h2{
+    font-size: 40px;
+    text-transform:uppercase;
+    letter-spacing: 4.75;
 }

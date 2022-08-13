@@ -1,6 +1,27 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
+    .technology-container{
+       background: url(../../assets/technology/background-technology-mobile.jpg);
+ 
+    }
+ }
+ @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
+    .technology-container{
+       background: url(../../assets/technology/background-technology-desktop.jpg);
+    }
+ 
+ }
+ @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
+    .technology-container{
+       background: url(../../assets/technology/background-technology-tablet.jpg);
+    }
+ }
+
 .technology-container{
-    background-image: url(../../assets/technology/background-technology-desktop.jpg);
-    color:#D0D6F9
+    color:#D0D6F9;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 
@@ -28,4 +49,14 @@ background-color: #fff;
 color:black;
 height: 40px;
 
+}
+
+.technology-container h3{
+    color:#fff;
+}
+
+.technology-container p{
+    padding:2px;
+    margin: 2px;
+    width: 500px;
 }

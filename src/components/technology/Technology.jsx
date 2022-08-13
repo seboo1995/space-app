@@ -40,7 +40,6 @@ const Technology = () => {
 
 <h2> SPACE LAUNCH 101 </h2>
      <img src={all_technologies[techID].images.portrait} alt = 'asl' id='222'/> 
-
       <ul ref={technology_ref}>
         {all_technologies.map((tech,index) => {
           return (
@@ -48,6 +47,7 @@ const Technology = () => {
           )
         })}  
       </ul>
+      <h4>The Terminology</h4>
       <h3> {all_technologies[techID].name}</h3>
       <br></br>
       <p> {all_technologies[techID].description}</p>

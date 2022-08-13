@@ -34,16 +34,18 @@ const Crew = () => {
     setCurrentPersonID(index);
     for (const btn of crew_ref.current.children) {
      
-   btn.style.opacity = 1;
+   btn.style.opacity = 0.5;
       
     }
-    crew_ref.current.children[index].style.opacity = 0.5;   
+    crew_ref.current.children[index].style.opacity = 1;   
   }
 
   return (
     <div>
 
     <h2>Meet your crew </h2>
+    <h3 id='role-text'> {all_crew[currentPersonID].role}</h3>
+    <h1 id='firsthead-font'>{all_crew[currentPersonID].name}</h1>
      <img src={all_crew[currentPersonID].images.png} alt = 'asl' id='222'/> 
 
       <ul ref={crew_ref}>
@@ -54,9 +56,6 @@ const Crew = () => {
         })}  
     </ul>
     <p> {all_crew[currentPersonID].bio}</p>
-    <h3> {all_crew[currentPersonID].role}</h3>
-    <br></br>
-    <h3>{all_crew[currentPersonID].name}</h3>
     </div>
   )
 }

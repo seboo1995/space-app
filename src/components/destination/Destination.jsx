@@ -33,10 +33,10 @@ const Destination = () => {
     setDestID(index);
     for (const btn of destination_ref.current.children) {
      
-   btn.style.opacity = 1;
+   btn.style.opacity = 0.5;
       
     }
-    destination_ref.current.children[index].style.opacity = 0.5;   
+    destination_ref.current.children[index].style.opacity = 1;   
   }
 
   return (
@@ -52,10 +52,12 @@ const Destination = () => {
           )
         })}  
     </ul>
-    <p> {all_destinations[destID].description}</p>
-    <h3> AVG.DISTANCE {all_destinations[destID].distanca}</h3>
+    <p id="desc-text"> {all_destinations[destID].description}</p>
+    <h3> AVG.DISTANCE </h3>
+    <p id='dist-text'>{all_destinations[destID].distance}</p>
     <br></br>
-    <h3> EST.TRAVEL TIME {all_destinations[destID].travel}</h3>
+    <h3> EST.TRAVEL TIME </h3>
+    <p id="travel-text">{all_destinations[destID].travel}</p>
     </div>
   )
 }
