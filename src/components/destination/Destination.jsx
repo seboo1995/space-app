@@ -1,58 +1,61 @@
-import {React,useState,useRef} from 'react'
+import {React,useState,useRef,useEffect} from 'react'
 import './Destination.css'
 import myData from '../../assets/data.json';
 
 const Destination = () => {
-  const all_destination = myData.destinations
-  const [imageSrc, setImageSrc] = useState(all_destination[0].images.png)
-  const [desc, setDesc] = useState(all_destination[0].description)
-  const [dist, setDist] = useState(all_destination[0].distance)
-  const [travel, setTravel] = useState(all_destination[0].travel)
-  const list_items = useRef();
-  
-  const changeSrc = (e) => {
-    const t = all_destination.filter((obj) => {
-    if (e.currentTarget.textContent.toLowerCase().trim() ===  obj.name.toLowerCase().trim() ) {
-        return true
-    }})
-    setDesc(t[0].description)
-    setDist(t[0].distance)
-    setTravel(t[0].travel)
-    setImageSrc(t[0].images.png)
-    all_destination.forEach((obj) => {
-      if (e.currentTarget.textContent.toLowerCase().trim() === obj.name.toLowerCase().trim()) {
-          document.getElementById(obj.name).style.opacity = 0.5
-      }
-      // this should be changed when refactoring
-      else {
-        document.getElementById(obj.name).style.opacity = 1
-      }
+
+  const all_destinations = myData.destinations
+  const [destID, setDestID] = useState(0);
+  const destination_ref = useRef()
+
+  useEffect(function(){
+     const intervalRef =  setInterval(function(){
+      let nextIndex =  (( destID+ 1) % 4)
+      changeSrc(nextIndex)
+
+     },2000)
+
+      return () => clearInterval(intervalRef)
+  },[destID])
+
+  useEffect(()  => {
+    document.body.classList.add('destination-container');
+
+    return () => {
+        document.body.classList.remove('destination-container');
+    };
+});
 
 
-    })
-   
+
+
+   function changeSrc(index) {
+    setDestID(index);
+    for (const btn of destination_ref.current.children) {
+     
+   btn.style.opacity = 1;
+      
+    }
+    destination_ref.current.children[index].style.opacity = 0.5;   
   }
 
   return (
-       <div className='destination-container'>
+    <div>
 
-    <h2> PICK YOUR DESTINATION </h2>
-     <img src={imageSrc} alt = 'asl' id='222'/> 
-    <h2> PICK YOUR DESTINATION </h2>
+<h2> PICK YOUR DESTINATION </h2>
+     <img src={all_destinations[destID].images.png} alt = 'asl' id='222'/> 
 
-      <ul ref = {list_items}>
-        {all_destination.map((destination) => {
+      <ul ref={destination_ref}>
+        {all_destinations.map((crew,index) => {
           return (
-            <button onClick={changeSrc} key={destination.name} id={destination.name}> {destination.name}</button>
-
-            
+            <button onClick={()=> changeSrc(index)} key={crew.name} id={crew.name}> </button>
           )
         })}  
     </ul>
-    <p> {desc}</p>
-    <h3> AVG.DISTANCE {dist}</h3>
+    <p> {all_destinations[destID].description}</p>
+    <h3> AVG.DISTANCE {all_destinations[destID].distanca}</h3>
     <br></br>
-    <h3> EST.TRAVEL TIME {travel}</h3>
+    <h3> EST.TRAVEL TIME {all_destinations[destID].travel}</h3>
     </div>
   )
 }

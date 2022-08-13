@@ -1,11 +1,12 @@
-.home-container{
+ .home-container{
     background: url(../../assets/home/background-home-desktop.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color:#D0D6F9
 }
+
+
 h1{
     color:#ffffff;
     font-weight: bold;
@@ -25,4 +26,59 @@ h1{
 #exp-btn:hover{
     transform:scale(1.5);
     opacity:0.5;
+    
 }
+.angry-grid {
+    display: grid; 
+    grid-template-rows: 1fr 1fr  1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color:white;
+    height: 100%;
+    align-items: center;
+
+    
+ }
+   
+ #item-0 {
+ 
+    grid-row-start: 1;
+    grid-column-start: 2;
+    font-family: 'Barlow Condensed';
+    font-size: 28px;
+    text-transform:uppercase;
+    letter-spacing: 4.75;
+    grid-row-end: 2;
+    grid-column-end: 3;
+
+ }
+
+ #item-1 {
+ 
+    grid-row-start: 2;
+    grid-column-start: 2;
+    
+    grid-row-end: 3;
+    grid-column-end: 4;
+    
+ }
+ #item-1 h1{
+    font-size: 150px;
+ }
+ #item-2 {
+ 
+    grid-row-start: 3;
+    grid-column-start: 2;
+ 
+    grid-row-end: 5;
+    grid-column-end: 4;
+    
+ }
+ #item-3 {
+ 
+    grid-row-start: 3;
+    grid-column-start: 4;
+ 
+    grid-row-end: 5;
+    grid-column-end: 6;
+    
+ }

@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Technology from './components/technology/Technology';
 import Crew from './components/crew/Crew';
 import Destination from './components/destination/Destination'
-import Home from './components/home/Home'
+import Home from './components/Home/Home'
 import { MyNavBar } from './components/MyNavBar/MyNavBar';
 
 function App() {

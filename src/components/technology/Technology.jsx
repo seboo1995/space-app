@@ -1,53 +1,58 @@
-import {React,useState} from 'react'
+import {React,useState,useEffect,useRef} from 'react'
 import './Technology.css'
 import myData from '../../assets/data.json';
 
 const Technology = () => {
-  const all_technology = myData.technology
-  const [imageSrc, setImageSrc] = useState(all_technology[0].images.portrait)
-  const [techname, setTechName] = useState(all_technology[0].name)
-  const [desc, setDesc] = useState(all_technology[0].description)
+  const all_technologies = myData.technology
+  const [techID, setTechID] = useState(0);
+  const technology_ref = useRef()
 
+  useEffect(function(){
+     const intervalRef =  setInterval(function(){
+      let nextIndex =  (( techID+ 1) % all_technologies.length)
+      changeSrc(nextIndex)
+
+     },2000)
+
+      return () => clearInterval(intervalRef)
+  }, [techID])
   
-  const changeSrc = (e) => {
-    const t = all_technology.filter((obj) => {
-    if (e.currentTarget.textContent.toLowerCase().trim() ===  obj.name.toLowerCase().trim() ) {
-        return true
-    }})
-    setDesc(t[0].description)
-    setTechName(t[0].name)
-    setImageSrc(t[0].images.portrait)
-    all_technology.forEach((obj) => {
-      if (e.currentTarget.textContent.toLowerCase().trim() === obj.name.toLowerCase().trim()) {
-          document.getElementById(obj.name).style.opacity = 0.5
-      }
-      else {
-        document.getElementById(obj.name).style.opacity = 1
-      }
 
+  useEffect(()  => {
+    document.body.classList.add('technology-container');
 
-    })
-   
+    return () => {
+        document.body.classList.remove('technology-container');
+    };
+});
+
+  function changeSrc(index) {
+    setTechID(index);
+    for (const btn of technology_ref.current.children) {
+      btn.style.background = 'transparent'
+      btn.style.color = '#fff'
+    }
+    technology_ref.current.children[index].style.background = '#fff'
+    technology_ref.current.children[index].style.color = 'black'
   }
-
   return (
-       <div className='technology-container'>
+    <div>
 
-    <h2> SPACE LAUNCH 101 </h2>
-     <img src={imageSrc} alt = 'asl' id='222'/> 
+<h2> SPACE LAUNCH 101 </h2>
+     <img src={all_technologies[techID].images.portrait} alt = 'asl' id='222'/> 
 
-      <ul>
-        {all_technology.map((technology) => {
+      <ul ref={technology_ref}>
+        {all_technologies.map((tech,index) => {
           return (
-            <button onClick={ changeSrc} key={technology.name} id={technology.name}> {technology.name}</button>
-
-            
+            <button onClick={() => changeSrc(index)} key={tech.name} id={tech.name}> {index+1}</button>
           )
         })}  
-    </ul>
-    <p> {desc}</p>
-    <br></br>
-    <h3> {techname}</h3>
+      </ul>
+      <h3> {all_technologies[techID].name}</h3>
+      <br></br>
+      <p> {all_technologies[techID].description}</p>
+
+
     </div>
   )
 }
