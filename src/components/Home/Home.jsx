@@ -36,6 +36,7 @@ const Home = () => {
        */}
 
       <div class="angry-grid">
+        <div class="pos-text">
         <div id="item-0">
         <p id='initial-text'>
             So, you want to travel to
@@ -50,6 +51,7 @@ const Home = () => {
             Well sit back, and relax because we'll give
             you a truly out of this world experience!
         </p></div>
+        </div>
         <div id="item-3">
         <div>
                 <Link to="/destination">
