@@ -106,11 +106,12 @@
          
             #toggle-btn:checked ~ .menu ul{
             display: block;
-          }    
-          
-        
-            
           }
+          .menuicon{
+              left: 5%;
+          }    
+        }
+
           
           
         

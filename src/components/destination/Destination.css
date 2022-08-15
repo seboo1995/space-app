@@ -16,7 +16,7 @@
     }
  }
 .destination-container{
-background: url(../../assets/destination/background-destination-desktop.jpg);
+/* background: url(../../assets/destination/background-destination-desktop.jpg); */
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;

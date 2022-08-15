@@ -1,8 +1,29 @@
+/* mobile css */
 @media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
    .home-container{
       background: url(../../assets/home/background-home-mobile.jpg);
-
+      align-self: center;
    }
+   .home-container #spc{
+    font-size:18px;  
+   }
+   .angry-grid {
+      display: grid; 
+      grid-template-rows: 1fr  1fr  1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      color:white;
+      height: 100%;
+      position: relative;
+      
+   }
+   #item-1 {
+ 
+      grid-row-start: 2;
+      grid-column-start: 2;
+      grid-row-end: 3;
+      grid-column-end: 4;
+   }
+  
 }
 @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
    .home-container{
@@ -46,64 +67,46 @@ h1{
     opacity:0.5;
     
 }
+/*  grid  */
 .angry-grid {
-    display: grid; 
-    grid-template-rows: 1fr 1fr  1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    color:white;
-    height: 100%;
-    position: relative;
-    left:-195px;
-    
- }
- 
- #item-0 {
-   grid-row-start: 1;
-   grid-column-start: 2;
-    font-family: 'Barlow Condensed';
-    font-size: 26px;
-    text-transform:uppercase;
-    letter-spacing: 4.75;
-    grid-row-end: 2;
-    grid-column-end: 3;
-    color:#D0D6F9;
-    align-self: end;
-    
- }
+   display: grid; 
 
- #item-1 {
- 
-    grid-row-start: 2;
-    grid-column-start: 2;
-    grid-row-end: 3;
-    grid-column-end: 4;
- }
- #item-1 h1{
-    font-size: 150px;
- }
-
- #item-2 {
- 
-    grid-row-start: 3;
-    grid-column-start: 2;
-    grid-row-end: 5;
-    grid-column-end: 4;
-    color:#D0D6F9;
- }
-#second-text{
-   width: 360px;
-}
- #item-3 {
- 
-    grid-row-start: 3;
-    grid-column-start: 4;
- 
-    grid-row-end: 5;
-    grid-column-end: 6;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr;
    
-    position: relative;
-    padding:2px;
-    margin: 2px;
-    width: 500px;
-    
- }
+   gap: 0px;
+   height: 100%;
+
+   
+}
+  
+#item-0 {
+
+   background-color: #D8C589; 
+   grid-row-start: 2;
+   grid-column-start: 1;
+
+   grid-row-end: 3;
+   grid-column-end: 2;
+   
+}
+#item-1 {
+
+   background-color: #6db7bc; 
+   grid-row-start: 3;
+   grid-column-start: 1;
+
+   grid-row-end: 4;
+   grid-column-end: 2;
+   
+}
+#item-2 {
+
+   background-color: #8b9fd5; 
+   grid-row-start: 4;
+   grid-column-start: 1;
+
+   grid-row-end: 5;
+   grid-column-end: 2;
+   
+}

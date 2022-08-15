@@ -42,7 +42,7 @@ const Home = () => {
         </p>
   </div>
         <div id="item-1">
-        <h1>SPACE</h1>
+        <h1 id='spc'>SPACE</h1>
   </div>
   <div id="item-2"><p id='second-text'>
             Let's face it; if you want to go to space, you might as well
