@@ -1,8 +1,40 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
     .destination-container{
        background: url(../../assets/destination/background-destination-mobile.jpg);
- 
+        align-self: center    
+
     }
+   #im{
+    height: 250px;
+    width: 250px;
+   }
+   .item-0,.item-2,.item-1,.item-3,.item-4,.item-5{
+    border: 2px solid white;
+    text-align: center;
+   }
+   .item-0{
+    font-size:20px;
+    margin:0;  
+    padding-left:20px;
+    }
+    .item-2{
+        margin-top:10px;
+    }
+    .item-3 h1{
+        font-size:60px;
+        color:#fff;
+    }
+    .item-3 p{
+        font-size:17px;
+        color:#D0D6F9;
+    }
+   
+    .item-3 p{
+        margin-bottom:25px;
+    }
+ 
+
+
  }
  @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
     .destination-container{
@@ -14,14 +46,18 @@
     .destination-container{
        background: url(../../assets/destination/background-destination-tablet.jpg);
     }
+    hr{
+        display: none;
+    }
+    
  }
 .destination-container{
 /* background: url(../../assets/destination/background-destination-desktop.jpg); */
-background-position: center;
+background-position: center center;
+background-attachment: fixed;
 background-repeat: no-repeat;
 background-size: cover;
-height: 100%;
-display: grid;
+display:inline-block;
 
 }
 
@@ -43,5 +79,10 @@ display: grid;
 }
 .destination-container h3, h2{
     color:#ffffff
+}
+
+.destination-container hr{
+    height:2px;
+    color:white;
 }
 

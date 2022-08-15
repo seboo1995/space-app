@@ -41,23 +41,35 @@ const Destination = () => {
 
   return (
     <div>
-
-<h2> PICK YOUR DESTINATION </h2>
-     <img src={all_destinations[destID].images.png} alt = 'asl' id='222'/> 
-
+<div className='item-0'>
+<p> PICK YOUR DESTINATION </p>
+</div>
+    <div className='item-1'>
+     <img src={all_destinations[destID].images.png} alt = 'asl' id='im'/> 
+     </div>
+     <div className='item-2'>
       <ul ref={destination_ref}>
-        {all_destinations.map((crew,index) => {
+        {all_destinations.map((destination,index) => {
           return (
-            <button onClick={()=> changeSrc(index)} key={crew.name} id={crew.name}> </button>
+            <button onClick={()=> changeSrc(index)} key={destination.name} id={destination.name}> {destination.name} </button>
           )
         })}  
     </ul>
+    </div>
+    <div className='item-3'>
+    <h1> {all_destinations[destID].name}</h1>
     <p id="desc-text"> {all_destinations[destID].description}</p>
+    </div>
+    <hr/>
+
+    <div className = 'item-4'>
     <h3> AVG.DISTANCE </h3>
     <p id='dist-text'>{all_destinations[destID].distance}</p>
-    <br></br>
+    </div>
+    <div className='item-5'>
     <h3> EST.TRAVEL TIME </h3>
     <p id="travel-text">{all_destinations[destID].travel}</p>
+    </div>
     </div>
   )
 }
