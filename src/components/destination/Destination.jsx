@@ -42,7 +42,8 @@ const Destination = () => {
   return (
     <div>
 <div className='item-0'>
-<p> PICK YOUR DESTINATION </p>
+  <p id='item-0-numb'>01</p>
+<p id='item-0-text'>PICK YOUR DESTINATION </p>
 </div>
     <div className='item-1'>
      <img src={all_destinations[destID].images.png} alt = 'asl' id='im'/> 
@@ -60,7 +61,7 @@ const Destination = () => {
     <h1> {all_destinations[destID].name}</h1>
     <p id="desc-text"> {all_destinations[destID].description}</p>
     </div>
-    <hr/>
+    <hr id='hor-line'/>
 
     <div className = 'item-4'>
     <h3> AVG.DISTANCE </h3>
