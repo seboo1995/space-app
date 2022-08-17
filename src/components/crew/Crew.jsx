@@ -43,10 +43,10 @@ const Crew = () => {
   return (
     <div>
       <div className='item-0'>
-    <h2>Meet your crew </h2>
+    <h2> <p id='item-0-num'> 02 </p>Meet your crew </h2>
     </div>
     <div className='item-1'>
-    <h3 id='role-text'> {all_crew[currentPersonID].role}</h3>
+    <h3 id='role-text'> {all_crew[currentPersonID].role} </h3>
     </div>
     <div className='item-2'>
     <h1 id='firsthead-font'>{all_crew[currentPersonID].name}</h1>
