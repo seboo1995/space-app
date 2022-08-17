@@ -56,24 +56,61 @@
  @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
     .crew-container{
        background: url(../../assets/crew/background-crew-tablet.jpg);
-       display:flex;
-       flex-flow: column;
    }
 
-   .item-0, .item-1, .item-2, .item-3, .item-4, .item-5{
-    border: 2px solid white;
+   #items-crew{
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+   }
+   .item-0, h2{
+    float:left;
+    color:white;
+    text-transform: uppercase;
+    
+   }
+   .item-1{
+    margin-top:30px;
+   }
+    #item-0-num{
+    opacity: 0.5;
+    display: inline-block;
+    margin-right: 20px;
+   
    }
    #bio-text{
     order: 4;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:#D0D6F9;
+    font-weight: 100;
+   }
+   .item-3 #im{
+    height: 800px;
+    width: 600px;
+    margin-top: 50px;
+   }
+   #role-text{
+    color:white;
+    opacity: 0.5;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 100;
+   }
+   #firsthead-font{
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
    }
    .item-4{
     order: 5;
+    margin-right: 80px;
    }
    .item-3{
     order: 6;
    }
    
-
     }
 
 
