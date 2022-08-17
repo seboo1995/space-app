@@ -41,20 +41,20 @@ const Crew = () => {
   }
 
   return (
-    <div id="items-crew">
-      <div className='item-0'>
-    <h2> <p id='item-0-num'> 02 </p>Meet your crew </h2>
+    <div id='items-crew'>
+      <div className='item-0-crew'>
+    <h2> <p id='item-0-crew-num'> 02 </p>Meet your crew </h2>
     </div>
-    <div className='item-1'>
+    <div className='item-1-crew'>
     <h3 id='role-text'> {all_crew[currentPersonID].role} </h3>
     </div>
-    <div className='item-2'>
+    <div className='item-2-crew'>
     <h1 id='firsthead-font'>{all_crew[currentPersonID].name}</h1>
     </div> 
-    <div className='item-3'>
+    <div className='item-3-crew'>
      <img src={all_crew[currentPersonID].images.png} alt = 'asl' id='im'/> 
      </div>
-     <div className='item-4'>
+     <div className='item-4-crew'>
       <ul ref={crew_ref}>
         {all_crew.map((crew,index) => {
           return (
@@ -63,7 +63,7 @@ const Crew = () => {
         })}  
     </ul>
     </div>
-    <div className='item-5'>
+    <div className='item-5-crew'>
     <p id='bio-text'> {all_crew[currentPersonID].bio}</p>
     </div>
 
