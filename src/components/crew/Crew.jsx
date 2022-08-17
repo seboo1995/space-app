@@ -41,7 +41,7 @@ const Crew = () => {
   }
 
   return (
-    <div>
+    <div id="items-crew">
       <div className='item-0'>
     <h2> <p id='item-0-num'> 02 </p>Meet your crew </h2>
     </div>
