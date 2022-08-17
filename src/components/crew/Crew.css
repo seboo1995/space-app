@@ -83,11 +83,28 @@
     .crew-container{
        background: url(../../assets/crew/background-crew-desktop.jpg);
     }
-
+    #items-crew{
+        display: flex;
+        flex-flow: column;
+    }
+    #bio-text{
+        color:#D0D6F9;
+        font-size: 30px;
+    }
+    #firsthead-font{
+        color: white;
+    }
+    #role-text{
+        color: white;
+    }
+    .item-0, h2{
+        color:white;
+    }
  
  }
 
-.crew-container {
+
+ .crew-container {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,4 +130,3 @@
     margin: 5px;
     padding: 2px;
 }
-

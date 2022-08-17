@@ -41,14 +41,14 @@ const Destination = () => {
 
   return (
     <div>
-<div className='item-0'>
-  <p id='item-0-numb'>01</p>
-<p id='item-0-text'>PICK YOUR DESTINATION </p>
+<div className='item-0-dest'>
+  <p id='item-0-dest-numb'>01</p>
+<p id='item-0-dest-text'>PICK YOUR DESTINATION </p>
 </div>
-    <div className='item-1'>
+    <div className='item-1-dest'>
      <img src={all_destinations[destID].images.png} alt = 'asl' id='im'/> 
      </div>
-     <div className='item-2'>
+     <div className='item-2-dest'>
       <ul ref={destination_ref}>
         {all_destinations.map((destination,index) => {
           return (
@@ -57,17 +57,17 @@ const Destination = () => {
         })}  
     </ul>
     </div>
-    <div className='item-3'>
+    <div className='item-3-dest'>
     <h1> {all_destinations[destID].name}</h1>
     <p id="desc-text"> {all_destinations[destID].description}</p>
     </div>
-    <hr id='hor-line'/>
+    <hr id='hor-line-dest'/>
 
-    <div className = 'item-4'>
+    <div className = 'item-4-dest'>
     <h3> AVG.DISTANCE </h3>
     <p id='dist-text'>{all_destinations[destID].distance}</p>
     </div>
-    <div className='item-5'>
+    <div className='item-5-dest'>
     <h3> EST.TRAVEL TIME </h3>
     <p id="travel-text">{all_destinations[destID].travel}</p>
     </div>
