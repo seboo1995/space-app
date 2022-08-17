@@ -1,3 +1,4 @@
+/*  mobile  */
 @media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
     .crew-container{
        background: url(../../assets/crew/background-crew-mobile.jpg);
@@ -51,30 +52,32 @@
         text-align: center;
     }
  }
-
+ /*  tablet  */
  @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
     .crew-container{
        background: url(../../assets/crew/background-crew-tablet.jpg);
-       display:inline-block;
-       align-self: center;
+       display:flex;
+       flex-flow: column;
+   }
+
+   .item-0, .item-1, .item-2, .item-3, .item-4, .item-5{
+    border: 2px solid white;
+   }
+   #bio-text{
+    order: 4;
+   }
+   .item-4{
+    order: 5;
+   }
+   .item-3{
+    order: 6;
+   }
+   
+
     }
-    .item-0, .item-1, .item-2, .item-3, .item-4, .item-5{
-        border: 2px solid white;
-        text-decoration: center;
-    }
-    .crew-container, #im{
-        height:10px;
-        width: 10px;
-    }
-    .item-5, #bio-text{
-        margin-left:25px;
-        margin-right:25px;
-        font-size: 16px;
-        color:#D0D6F9;
-        font-weight: 200;
-        text-align: center;
-    }
- }
+
+
+ 
 
  @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
     .crew-container{
