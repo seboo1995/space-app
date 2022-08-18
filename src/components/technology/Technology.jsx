@@ -75,11 +75,11 @@ const Technology = () => {
         <h4>The Terminology...</h4>
         <h3> {all_technologies[techID].name}</h3>
         <br></br>
-        
-      </div>
-      <div className='desc-tech'>
+        <div className='desc-tech'>
         <p id="desc-tech-text"> {all_technologies[techID].description}</p>
         </div>
+      </div>
+
     </div>
   );
 };
