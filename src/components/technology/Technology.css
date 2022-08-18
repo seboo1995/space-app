@@ -4,14 +4,19 @@
         }
 
     .grid-container{
+
         display: grid;
-        grid-template-columns: 1fr minmax(auto);
+        grid-template-columns:  1fr minmax(auto);
+        grid-template-rows: repeat(6 minmax(1fr, auto));
+
         grid-gap:1em;
-       justify-content:center;
+        justify-content:center;
+        align-content: center;
 
     }
     .title-tab-tech h2{
         text-align:center;
+        color: #fff;
     }
     .title-tab-tech p{
         display:inline;
@@ -23,22 +28,145 @@
     }
     .description-tab-tech h3,h4{
         font-size:2.5em;
-        text-align:center
+        text-align:center;
+        text-transform: uppercase;
     }
-    
-    
+    .description-tab-tech h3{
+        color:#fff;
+     
+    }
+    .desc-tech{
+        text-align: center;
+        font-weight: 100;
+        font-size: 20px;
+
+    }
+    .image-tab-tech #im-tech{
+        height: 300px;
+        width: 100%;
+    }
+    .technology-container button:first-child {
+        background-color: #fff;
+        color:black;
+    }
+
+    .technology-container button{
+        display:inline-block;
+        width:35px;
+        height:35px;
+        border: 2px solid #f5f5f5;
+        color: #fff;
+        border-radius: 50%;
+        text-align:center;
+        text-decoration:none;
+        background: transparent;
+        box-shadow: 0 0 3px gray;
+        margin: 2%;
+        
+    }
+    .tech-button-active{
+        background-color: #fff;
+        color:black;
+        height: 40px;
+        
+        }
+        
     
  }
- @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
-    .technology-container{
-       background: url(../../assets/technology/background-technology-desktop.jpg);
-    }
- 
- }
+
  @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
     .technology-container{
        background: url(../../assets/technology/background-technology-tablet.jpg);
     }
+    .grid-container{
+      
+        display: grid;
+        grid-template-columns:  1fr minmax(auto);
+        grid-template-rows: repeat(6 minmax(1fr, auto));
+
+        grid-gap:1em;
+        justify-content:center;
+        align-content: center;
+        margin-top: 40px;
+
+    }
+    .title-tab-tech h2{
+        text-align:center;
+        color: #fff;
+    }
+    .title-tab-tech p{
+        display:inline;
+        color:grey;
+    }
+    .title-tab-tech {
+        margin-bottom: 30px;
+        margin-left: 40px;
+    }
+  
+    .number-button-tech{
+        text-align:center;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .description-tab-tech h3,h4{
+        text-align:center;
+        text-transform: uppercase;
+    
+    }
+    .description-tab-tech h4{
+        font-size: 20px;
+    }
+    .description-tab-tech h3{
+        color:#fff;
+        font-size: 60px;
+    }
+    .desc-tech{
+        margin-top: -40px;
+        margin-left: 90px;
+        margin-right: 90px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 20px;
+    }
+    .image-tab-tech #im-tech{
+        height: 490px;
+        width: 100%;
+    }
+    .technology-container button:first-child {
+        background-color: #fff;
+        color:black;
+    }
+    .technology-container button{
+        display:inline-block;
+        width:65px;
+        height:65px;
+        border: 2px solid #f5f5f5;
+        color: #fff;
+        border-radius: 50%;
+        text-align:center;
+        text-decoration:none;
+        background: transparent;
+        box-shadow: 0 0 3px gray;
+        margin: 2%;
+        font-size: 30px;
+    }
+    .tech-button-active{
+        background-color: #fff;
+        color:black;
+        height: 40px;
+        
+        }    
+ }
+
+
+
+ @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
+    .technology-container{
+       background: url(../../assets/technology/background-technology-desktop.jpg);
+    }
+
+    
+
  }
 
 .technology-container{
@@ -46,42 +174,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    background-attachment: fixed;
 }
 
 
 
-.technology-container button:first-child {
-    background-color: #fff;
-    color:black;
-}
-.technology-container button{
-    display:inline-block;
-    width:35px;
-    height:35px;
-    border: 2px solid #f5f5f5;
-    color: #fff;
-    border-radius: 50%;
-    text-align:center;
-    text-decoration:none;
-    background: transparent;
-    box-shadow: 0 0 3px gray;
-    margin: 2%;
-    
-}
-.tech-button-active{
-background-color: #fff;
-color:black;
-height: 40px;
 
-}
-
-.technology-container h3{
-    color:#fff;
-}
-
-.technology-container p{
-    padding:2px;
-    margin: 2px;
-    width: 500px;
-}

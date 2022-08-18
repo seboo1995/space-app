@@ -39,7 +39,7 @@ const Technology = () => {
   return (
     <div className="grid-container">
       {/* First Row  */}
-      <div className="title-tab-tech">
+      <div className="title-tab-tech ">
         <h2>
           {" "}
           <p> 03 </p> SPACE LAUNCH 101{" "}
@@ -50,7 +50,7 @@ const Technology = () => {
         <img
           src={all_technologies[techID].images.portrait}
           alt="asl"
-          id="222"
+          id="im-tech"
         />
       </div>
       {/* Third row */}
@@ -72,13 +72,13 @@ const Technology = () => {
       </div>
 
       <div className="description-tab-tech">
-        <h4>The Terminology</h4>
+        <h4>The Terminology...</h4>
         <h3> {all_technologies[techID].name}</h3>
         <br></br>
         
       </div>
       <div className='desc-tech'>
-        <p> {all_technologies[techID].description}</p>
+        <p id="desc-tech-text"> {all_technologies[techID].description}</p>
         </div>
     </div>
   );
