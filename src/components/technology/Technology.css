@@ -1,8 +1,33 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
     .technology-container{
        background: url(../../assets/technology/background-technology-mobile.jpg);
- 
+        }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr minmax(auto);
+        grid-gap:1em;
+       justify-content:center;
+
     }
+    .title-tab-tech h2{
+        text-align:center;
+    }
+    .title-tab-tech p{
+        display:inline;
+        color:grey;
+    }
+  
+    .number-button-tech{
+        text-align:center;
+    }
+    .description-tab-tech h3,h4{
+        font-size:2.5em;
+        text-align:center
+    }
+    
+    
+    
  }
  @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
     .technology-container{
