@@ -67,6 +67,10 @@
        background: url(../../assets/destination/background-destination-tablet.jpg);
        align-self: center;
     }
+    .items-destination{
+        margin-top:80px;
+        align-items:center;
+    }
     #im{
         margin-top: 100px;
         height: 500px;
@@ -144,8 +148,7 @@
 
     }
     .item-0-dest, .item-1-dest, .item-2-dest, .item-3-dest, .item-4-dest, .item-5-dest{
-        border: 2px solid white;
-        display: inline-block;   
+        border: 2px solid white;   
     }
 
     .items-destination{
