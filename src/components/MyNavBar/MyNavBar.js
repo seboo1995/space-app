@@ -8,8 +8,6 @@ export const MyNavBar = () => {
     const target_tab_ref = useRef()
 
 
-
-
     const check_tab = (e,target) => {
 
         e.currentTarget.classList.add('active_tab')
@@ -21,7 +19,6 @@ export const MyNavBar = () => {
         } 
         // if on mobile close tha ham menu
         label_ref.current.checked = false;
-
     
     }
 
@@ -33,6 +30,7 @@ export const MyNavBar = () => {
     useEffect(() => {
     const href = window.location.href.split('/')
     const target_tab = href.pop()
+    console.log(target_tab)
     for (const tab of target_tab_ref.current.children) {
            if (target_tab === ''){
              tab.children[0].classList.add('active_tab')
@@ -63,27 +61,26 @@ export const MyNavBar = () => {
                     <span className="bars"></span>
                 </label>
                 <div className="menu">
-
                     <ul ref={target_tab_ref}>
                         <li >
-                            <Link to="/home" onClick={check_tab} >
-                                <p>00</p> Home
+                            <Link to="/home" onClick={check_tab}>
+                                00 Home
                             </Link>
                         </li>
 
                         <li>
-                            <Link to="/destination"onClick={check_tab}  >
-                            <p>01</p> Destination
+                            <Link to="/destination"onClick={check_tab} >
+                                01 Destination
                             </Link>
                         </li>
                         <li>
-                            <Link to="/crew" onClick={check_tab} >
-                            <p>02</p> Crew
+                            <Link to="/crew" onClick={check_tab}>
+                                02 Crew
                             </Link>
                         </li>
                         <li>
-                            <Link to="/technology" onClick={check_tab} >
-                            <p>03</p> Technology
+                            <Link to="/technology" onClick={check_tab}>
+                                03 Technology
                             </Link>
                         </li>
                     </ul>

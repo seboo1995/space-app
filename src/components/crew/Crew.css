@@ -56,6 +56,10 @@
  @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
     .crew-container{
        background: url(../../assets/crew/background-crew-tablet.jpg);
+       background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
    }
 
    #items-crew{
@@ -80,7 +84,7 @@
    }
    #bio-text{
     order: 4;
-    font-size: 30px;
+    font-size: 20px;
     padding-left: 10px;
     padding-right: 10px;
     color:#D0D6F9;
@@ -111,6 +115,13 @@
     order: 6;
    }
    
+   .item-4-crew button{
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    padding: 2px;
+   }
     }
 
 
@@ -316,9 +327,9 @@
 
  .crew-container {
     background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     }
 .crew-container button:first-child {
     opacity: 1;
