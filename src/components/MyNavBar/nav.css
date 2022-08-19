@@ -7,21 +7,28 @@
 
   }
 .active_tab{
-  border-bottom: 2px solid #D0D6F9;
+  border-bottom: 3px solid #D0D6F9;
   line-height: 1em;
+  padding-bottom:1.2em;
 }
+
   .logo{
     line-height: 80px;
     font-size: 21px;     
     float: left;
     margin-left: 20px;
   }
+  
   .menu ul{
       display: flex;
+      background-color:rgba(208, 214, 249,0.2);
       flex-direction: row;
       float: right;
+      padding-right: 8em;
       list-style: none;
       line-height: 80px;
+      /* width: 60em; */
+      
       }
       .menu ul li{
       margin: 0 20px;
