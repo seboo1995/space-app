@@ -31,6 +31,9 @@
       .menu ul li{
       margin: 0 20px;
       }
+      .menu ul li p{
+        display:inline;
+      }
       .menu ul li a{
         font-size: 20px;
         color: #D0D6F9;
