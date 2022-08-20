@@ -7,8 +7,9 @@
 
   }
 .active_tab{
-  border-bottom: 2px solid #D0D6F9;
+  border-bottom: 4px solid #D0D6F9;
   line-height: 1em;
+  padding-bottom:30px;
 }
   .logo{
     line-height: 80px;
@@ -19,6 +20,10 @@
   .menu ul{
       display: flex;
       flex-direction: row;
+      background-color: rgb(208, 214, 249,0.2);
+      padding-right:200px;
+      padding-top:20px;
+      padding-bottom: 20px;
       float: right;
       list-style: none;
       line-height: 80px;
@@ -89,17 +94,28 @@
                }
           /*--- Media Query -----*/
           @media (max-width: 768px){
-            .menu ul{
-              flex-direction: column;
-              width: 100%;
-              left: 0;
-              top: 50px;
-              position: absolute;
-              background: transparent;
-              min-height: 50vh;
-              display: none;
+            .menu{
+              display: flex;
             }
-              .menu ul li{
+            .menu ul{
+              padding-top: 120px;
+              padding-left: 150px;
+
+              width: 100%;
+              left:20px;
+              position: fixed;
+              min-height: 100vh;
+              display: none;
+
+            }
+            .change_nav_background{
+            background-color: rgb(208, 214, 249,0.2);
+            }
+            .change_opacity{
+              opacity: 0.2;
+            }
+  
+            .menu ul li{
                 margin: 5px 25px;
                 }
                 .menuicon{display: block;}

@@ -9,9 +9,7 @@ export const MyNavBar = () => {
 
 
     const check_tab = (e,target) => {
-
         e.currentTarget.classList.add('active_tab')
-        
         for (const i of e.currentTarget.parentNode.parentNode.children) {
             if (i.children[0].textContent != e.currentTarget.textContent){
                 i.children[0].classList.remove('active_tab');
@@ -19,7 +17,11 @@ export const MyNavBar = () => {
         } 
         // if on mobile close tha ham menu
         label_ref.current.checked = false;
-    
+    }
+
+    function close_ham(){ 
+        label_ref.current.checked = false;
+        document.body.classList.toggle('change_nav_background')
     }
 
     // check the current tab
@@ -61,26 +63,26 @@ export const MyNavBar = () => {
                     <span className="bars"></span>
                 </label>
                 <div className="menu">
-                    <ul ref={target_tab_ref}>
+                    <ul ref={target_tab_ref} onClick={close_ham}>
                         <li >
                             <Link to="/home" onClick={check_tab}>
-                                00 Home
+                                Home
                             </Link>
                         </li>
 
                         <li>
                             <Link to="/destination"onClick={check_tab} >
-                                01 Destination
+                                Destination
                             </Link>
                         </li>
                         <li>
                             <Link to="/crew" onClick={check_tab}>
-                                02 Crew
+                                Crew
                             </Link>
                         </li>
                         <li>
                             <Link to="/technology" onClick={check_tab}>
-                                03 Technology
+                                Technology
                             </Link>
                         </li>
                     </ul>
