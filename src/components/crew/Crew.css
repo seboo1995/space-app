@@ -2,7 +2,12 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
     .crew-container{
        background: url(../../assets/crew/background-crew-mobile.jpg);
-       align-self: center;
+    }
+    #items-crew{
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        height: 100ch;
+        gap: 0;
     }
     .crew-container h2{
         color:#fff;
@@ -10,20 +15,49 @@
         text-transform: uppercase;
     }
     .crew-container #im{
-        margin-top:50px;
-        height:250px;
-        width: 200px;
+        height:290px;
+        width: 230px;
+        margin-top: -20px;
     }
     .item-0-crew, .item-1-crew, .item-2-crew, .item-3-crew, .item-4-crew, .item-5-crew {
         text-align: center;
     }
+    .item-0-crew{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .item-3-crew{
+        margin-bottom: 120px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin:0;
+    }
+    .item-4-crew{
+        grid-row-start: 3;
+        grid-row-end: 4;
+       margin-right: 30px;
+        padding: 2px;
+        margin-top: 35px;
+       
+    }
+    .item-4-crew button{
+        height: 14.5px;
+        width: 14.5px;
+        margin-left: 8px;
+        margin-right: 8px;
+        padding:5px;
+        border-radius: 50%;
+       
+    }
+    #item-0-crew-num{
+        display: inline;
+        color: gray;
+    }
     .item-0-crew, h2 {
         margin: 0;
     }
-    .item-3-crew, #im {
-        margin-top: 25px;
-    }
     .item-1-crew, #role-text {
+        margin-bottom:30px;
         color:#ffffff;
         opacity: 0.5;
         text-transform: uppercase;
@@ -31,19 +65,13 @@
     .item-2-crew, #firsthead-font{
         color:#fff;
         font-size: 28px;
-        margin-top: 10px;
+        margin-top: -45px;
         text-transform: uppercase;
         
     }
-    .item-4-crew, button{
 
-        margin-top:30px;
-        margin-left: 30px;
-        margin-right: 60px;
-    }
-   
     .item-5-crew, #bio-text{
-        margin-top: 40px;
+        margin-top: -80px;
         margin-left:25px;
         margin-right:25px;
         font-size: 16px;
@@ -56,10 +84,6 @@
  @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
     .crew-container{
        background: url(../../assets/crew/background-crew-tablet.jpg);
-       background-position: center center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
    }
 
    #items-crew{
@@ -187,144 +211,15 @@
     }
 
 
+.crew-container button{
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 2px;
+}
 
-
-
-
-
-
-
-
-
-
-
-/*     
-    #bio-text{
-        color:#D0D6F9;
-        font-size: 30px;
-    }
-    #firsthead-font{
-        color: white;
-    }
-    #role-text{
-        color: white;
-    }
-    .item-0-crew, h2{
-        color:white;
-    }
-    .item-0-crew, .item-1-crew, .item-2-crew, .item-3-crew, .item-4-crew, .item-5-crew {
-        border: 2px solid white;
-    }
-    .item-0-crew #item-0-crew-num{
-        opacity: 0.5;
-        display: inline-block;
-        margin-right: 20px;
-    }
-    .item-0-crew {
-        text-transform: uppercase;
-        
-        margin-bottom: 150px;
-        margin-top: 90px;
-        margin-left: 60px;
-        margin-right: 60px;
-        meet your crew + numb
-        grid-row-start: 1;
-        grid-column-start: 1;
-     
-        grid-row-end: 2;
-        grid-column-end: 2;
-        
-     }
-
-     #role-text{
-        font-size: 35px;
-        opacity: 0.5;
-        font-weight: 100;
-        text-transform: uppercase;
-     }
-
-     .item-1-crew {
-          role 
-          margin-left: 60px;
-        align-self: end;
-        grid-row-start: 2;
-        grid-column-start: 1;
-
-        
-        grid-row-end: 3;
-        grid-column-end: 2;
-        
-     }
-     #firsthead-font{
-        color:white;
-        font-size: 60px;
-     }
-     .item-2-crew {
-        name
-        margin-left: 60px;
-        width: 600px;
-        align-self: flex-start;
-        
-        grid-row-start: 3;
-        grid-column-start: 1;
-     
-        grid-row-end: 4;
-        grid-column-end: 2;
-        
-     }
-     #im{
-        height: 600px;
-        width: 350px;
-      
-     }
-     .item-3-crew {
-         img
-        align-self: center;
-         margin-left: 200px;
-         margin-right: 240px;
-         margin-bottom: 320px;
-        grid-row-start: 3;
-        grid-column-start: 2;
-     
-        grid-row-end: 6;
-        grid-column-end: 4;
-       
-        
-     }
-     .item-4-crew {
-        margin-left: 60px;
-        buttons
-       margin-top: -90px;
-        margin-bottom:400px;
-        grid-row-start: 5;
-        grid-column-start: 1;
-     
-        grid-row-end: 6;
-        grid-column-end: 2;
-        
-     }
-     #bio-text{
-        color:#D0D6F9;
-        font-size: 30px;
-        font-weight: 100;
-     }
-     .item-5-crew {
-        margin-left: 60px;
-        margin-bottom:300px;
-        margin-top: -190px;
-        bio-text
-        grid-row-start: 4;
-        grid-column-start: 1;
-     
-        grid-row-end: 5;
-        grid-column-end: 2;
-     }
-
-     
- 
- } */
-
-
+ }
  .crew-container {
     background-position: center center;
     background-attachment: fixed;
@@ -343,13 +238,3 @@
 .crew-container button:nth-child(4){
     opacity: 0.5;
 }
-
-.crew-container button{
-    width: 20px;
-    height:20px;
-    border-radius: 50%;
-    margin: 5px;
-    padding: 2px;
-}
-
- }
