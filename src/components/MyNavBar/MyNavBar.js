@@ -9,15 +9,18 @@ export const MyNavBar = () => {
 
 
     const check_tab = (e,target) => {
+        if (window.innerWidth > 801 ){
         e.currentTarget.classList.add('active_tab')
         for (const i of e.currentTarget.parentNode.parentNode.children) {
-            if (i.children[0].textContent != e.currentTarget.textContent){
+            if ((i.children[0].textContent != e.currentTarget.textContent)){
                 i.children[0].classList.remove('active_tab');
+                
             }
         } 
         // if on mobile close tha ham menu
         label_ref.current.checked = false;
     }
+}
 
     function close_ham(){ 
         label_ref.current.checked = false;
@@ -30,9 +33,9 @@ export const MyNavBar = () => {
     // maybe this could be done with a if statement,
     // but I am not really good at them
     useEffect(() => {
+    if (window.innerWidth > 801){
     const href = window.location.href.split('/')
     const target_tab = href.pop()
-    console.log(target_tab)
     for (const tab of target_tab_ref.current.children) {
            if (target_tab === ''){
              tab.children[0].classList.add('active_tab')
@@ -40,10 +43,10 @@ export const MyNavBar = () => {
            }
         if(tab.children[0].textContent.toLowerCase().includes(target_tab.toLowerCase())){
           tab.children[0].classList.add('active_tab')
-          console.log(tab)
           break;
           }
-     }
+        }
+    }
         
     },[])
     
@@ -66,13 +69,13 @@ export const MyNavBar = () => {
                     <ul ref={target_tab_ref} onClick={close_ham}>
                         <li >
                             <Link to="/home" onClick={check_tab}>
-                               <p> 00 </p> Home
+                               <p>00</p>Home
                             </Link>
                         </li>
 
                         <li>
                             <Link to="/destination"onClick={check_tab} >
-                               <p> 01</p> Destination
+                               <p> 01</p>Destination
                             </Link>
                         </li>
                         <li>
@@ -82,7 +85,7 @@ export const MyNavBar = () => {
                         </li>
                         <li>
                             <Link to="/technology" onClick={check_tab}>
-                                <p> 03 </p>Technology
+                                <p>03</p>Technology
                             </Link>
                         </li>
                     </ul>
