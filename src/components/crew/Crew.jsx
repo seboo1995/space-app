@@ -54,7 +54,7 @@ const Crew = () => {
         <h1 id="firsthead-font">{all_crew[currentPersonID].name}</h1>
       </div>
       <div className="item-3-crew">
-        <img src={all_crew[currentPersonID].images.png} alt="asl" id="im" />
+        <img src={all_crew[currentPersonID].images.png} alt="asl" id="im-crew" />
       </div>
       <div className="item-4-crew">
         <ul ref={crew_ref}>

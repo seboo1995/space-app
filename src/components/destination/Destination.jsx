@@ -46,7 +46,7 @@ const Destination = () => {
 <p id='item-0-dest-text'>PICK YOUR DESTINATION </p>
 </div>
     <div className='item-1-dest'>
-     <img src={all_destinations[destID].images.png} alt = 'asl' id='im'/> 
+     <img src={all_destinations[destID].images.png} alt = 'asl' id='im-dest'/> 
      </div>
      <div className='item-2-dest'>
       <ul ref={destination_ref}>
