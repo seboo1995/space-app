@@ -95,8 +95,117 @@
                transform: rotate(-45deg);
                top: 0;
                }
+
+
+/* tablet nav  */
+@media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
+  .header-bar{   
+    background: transparent;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    margin-bottom:50px;
+    height: 80px;
+  
+    }
+  .active_tab{
+    border-bottom: 4px solid #D0D6F9;
+    line-height: 1em;
+    padding-bottom:30px;
+  }
+    .logo{
+      line-height: 80px;
+      font-size: 21px;     
+      float: left;
+      margin-left: 20px;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(208, 214, 249,0.2);
+        padding-right:80px;
+        padding-bottom: 2px;
+        float: right;
+        padding-top:2px;
+        list-style: none;
+        line-height: 80px;
+        }
+        .menu ul li{
+        margin: 0 8px;
+        }
+        .menu ul li p{
+          display:inline;
+        }
+        .menu ul li a{
+          font-size: 20px;
+          color: #D0D6F9;
+          text-decoration: none;
+          }
+          .menu ul li a:hover{
+            color:#fff;
+          }
+            #toggle-btn{
+              display: none;
+            }
+            .menuicon{
+              cursor: pointer;
+              float: right;              
+              margin-right: 40px;
+              background: transparent;
+              width: 40px;
+              height: 40px; 
+              position: relative;  
+              margin-top: 20px;
+              display: none;
+            }
+            .bars{
+              content: " ";
+              background: #fff;
+              color: black;
+              width: 30px;
+              height: 2px;
+              position: absolute;
+              line-height: 80px;
+              top: 20px;
+              }
+              .bars:before{
+              content: " ";
+              background: #fff;
+              color: black;
+              width: 30px;
+              height: 2px;
+              position: absolute;
+              top: 8px;
+              }
+                .bars:after{
+              content: " ";
+              background: #fff;
+              color: black;
+              width: 30px;
+              height: 2px;
+              position: absolute;
+              top: -8px;
+              }
+              #toggle-btn:checked ~ .menuicon .bars{
+                background: transparent;
+                 }
+               #toggle-btn:checked ~ .menuicon .bars:before{
+                 transform: rotate(45deg);
+                 top: 0;
+                 }
+                #toggle-btn:checked ~ .menuicon .bars:after{
+                 transform: rotate(-45deg);
+                 top: 0;
+                 }
+  
+  
+
+
+
+}
+
           /*--- Media Query -----*/
-          @media (max-width: 768px){
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
             .menu{
               display: flex;
             }
@@ -111,6 +220,7 @@
               display: none;
 
             }
+           
             .change_nav_background{
             background-color: rgb(208, 214, 249,0.2);
             }
@@ -129,6 +239,9 @@
           .menuicon{
               left: 5%;
           }    
+          .menu ul li p{
+            display:inline;
+          }
         }
 
           
