@@ -108,6 +108,7 @@
     height: 80px;
   
     }
+  
   .active_tab{
     border-bottom: 4px solid #D0D6F9;
     line-height: 1em;
@@ -197,6 +198,10 @@
                  transform: rotate(-45deg);
                  top: 0;
                  }
+
+                #nav-bar-num{
+                display: none;  
+                }
   
   
 

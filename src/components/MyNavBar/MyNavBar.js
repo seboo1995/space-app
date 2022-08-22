@@ -69,23 +69,23 @@ export const MyNavBar = () => {
                     <ul ref={target_tab_ref} onClick={close_ham}>
                         <li >
                             <Link to="/home" onClick={check_tab}>
-                               <p>00</p>Home
+                               <p id='nav-bar-num'>00</p>Home
                             </Link>
                         </li>
 
                         <li>
                             <Link to="/destination"onClick={check_tab} >
-                               <p> 01</p>Destination
+                               <p id='nav-bar-num'> 01</p>Destination
                             </Link>
                         </li>
                         <li>
                             <Link to="/crew" onClick={check_tab}>
-                                <p>02</p>Crew
+                                <p id='nav-bar-num'>02</p>Crew
                             </Link>
                         </li>
                         <li>
                             <Link to="/technology" onClick={check_tab}>
-                                <p>03</p>Technology
+                                <p id='nav-bar-num'>03</p>Technology
                             </Link>
                         </li>
                     </ul>
