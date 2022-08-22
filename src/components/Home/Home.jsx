@@ -33,7 +33,7 @@ const Home = () => {
         </p></div>
         </div>
         <div id="item-3-home">
-        <div>
+        <div id='btn-container'>
                 <Link to="/destination">
                 <button id="exp-btn">  
                 EXPLORE

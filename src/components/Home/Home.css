@@ -104,16 +104,17 @@
       background: url(../../assets/home/background-home-desktop.jpg);
    }
    .home-container #spc{
-      font-size: 180px;
+      font-size: 120px;
    }
    .home-container #initial-text{
-      font-size: 35px;
+      font-size: 26px;
       text-transform: uppercase;
+      margin-left: 10px;
    }
    .pos-text{
-      margin-right: 60%;
-      margin-top: 12.5%;
-      margin-left: 8%;
+      margin-right: 50%;
+      margin-top: 15%;
+      
    }
    #item-0-home {
       color: #d0d6f9; 
@@ -125,10 +126,11 @@
    }
    #item-2-home {
       color:#d0d6f9;
-      font-size: 20px;
+      font-size: 18px;
       text-align: justify;
-      padding-left: 25px;
-      padding-right: 25px;
+      padding-left: 10px;
+      padding-right: 40px;
+      margin-left: 80px;
    }
    #item-3-home {
       position: fixed;
@@ -137,15 +139,19 @@
       text-align: center;
       margin-bottom: 12%;
    }
+   #btn-container{
+      margin-bottom: -40px;
+      margin-left: -50px;
+   }
    #exp-btn{
       text-decoration: none;
       align-items: center;
       border-radius: 50%;
       border: none;
-      height: 300px;
-      width: 300px;
+      height: 200px;
+      width: 200px;
       color:#0B0D17;
-      font-size: 48px;
+      font-size: 30px;
       transition: all 0.5s;
   }
 
