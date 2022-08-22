@@ -42,7 +42,7 @@ const Destination = () => {
   return (
     <div className='items-destination'>
 <div className='item-0-dest'>
-  <p id='item-0-dest-numb'>01</p>
+  <p id='item-0-dest-numb' >01 &nbsp;</p>
 <p id='item-0-dest-text'>PICK YOUR DESTINATION </p>
 </div>
     <div className='item-1-dest'>
