@@ -167,9 +167,10 @@
     #items-crew{
     display:grid;
     margin: 0;
+    margin-top: 80px;
     margin-left: 120px;
     grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(2, 1fr)    ;
+    grid-template-columns: repeat(2, 1fr) ;
     height: 100ch;
     position: relative;
     }
@@ -184,7 +185,6 @@
     #item-0-crew-num{
         display:inline;
         color:grey;
-        margin-right: 20px;
     }
     .item-1-crew{
         grid-row: 2/3;
@@ -192,7 +192,7 @@
         text-transform: uppercase;
         color:#fff;
         align-self:center;
-        margin-top: 90px;
+        margin-top: 50px;
         font-weight: 100;
         color: gray;
     }
@@ -202,12 +202,11 @@
         text-transform: uppercase;
         color:#fff;
         align-self:center;
-        margin-top: -150px;
-   
+        margin-top: -200px;
 
     }
     #firsthead-font{
-        font-size: 50px;
+        font-size: 40px;
     }
     .item-5-crew{
         grid-row:4;
@@ -215,8 +214,8 @@
         color:#D0D6F9;
         font-weight: 100;
         align-self:center;
-        margin-right:15rem;
-        margin-top:-18rem;
+        margin-right:5rem;
+        margin-top:-14rem;
 
     }
     .item-4-crew{
@@ -233,10 +232,10 @@
     }
     #im-crew{
         position: absolute;
-        margin-left: 250px;
+        margin-left: -50px;
         bottom: 0px;
         left: 50%;
-
+        
     }
 
  }

@@ -43,7 +43,7 @@ const Crew = () => {
       {/* Meet your crew  */}
       <div className="item-0-crew">
         <h2>
-          <p id="item-0-crew-num"> 02 </p>Meet your crew
+          <p id="item-0-crew-num"> 02 &nbsp;</p>Meet your crew
         </h2>
       </div>
 
