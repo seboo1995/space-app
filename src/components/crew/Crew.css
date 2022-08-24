@@ -152,7 +152,7 @@
 
  
 
- @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
+ @media screen and (min-device-width: 1024px) and (max-device-width: 1439px)  {
     .crew-container{
        background: url(../../assets/crew/background-crew-desktop.jpg);
     }
@@ -238,6 +238,95 @@
         
     }
 
+ }
+
+ @media screen and (min-device-width: 1440px) {
+    .crew-container{
+        background: url(../../assets/crew/background-crew-desktop.jpg);
+     }
+     .crew-container button{
+         width: 20px;
+         height:20px;
+         border-radius: 50%;
+         margin: 5px;
+         padding: 2px;
+     }
+ 
+     #items-crew{
+     display:grid;
+     margin: 0;
+     margin-left: 120px;
+     grid-template-rows: repeat(5, 1fr);
+     grid-template-columns: repeat(2, 1fr)    ;
+     height: 100ch;
+     position: relative;
+     }
+ 
+     .item-0-crew{
+        grid-row:1/2;
+         
+         color:#fff;
+         margin-top: 80px;
+    
+     }
+     #item-0-crew-num{
+         display:inline;
+         color:grey;
+         margin-right: 20px;
+     }
+     .item-1-crew{
+         grid-row: 2/3;
+         font-size: 20px;
+         text-transform: uppercase;
+         color:#fff;
+         align-self:center;
+         margin-top: 90px;
+         font-weight: 100;
+         color: gray;
+     }
+     .item-2-crew{
+         grid-row:3;
+         grid-column: 1;
+         text-transform: uppercase;
+         color:#fff;
+         align-self:center;
+         margin-top: -150px;
+    
+ 
+     }
+     #firsthead-font{
+         font-size: 50px;
+     }
+     .item-5-crew{
+         grid-row:4;
+         grid-column: 1;
+         color:#D0D6F9;
+         font-weight: 100;
+         align-self:center;
+         margin-right:15rem;
+         margin-top:-18rem;
+ 
+     }
+     .item-4-crew{
+         grid-row:5;
+         margin-left: -40px;
+         
+     }
+ 
+     .item-3-crew{
+         grid-row:1/span 5;
+         grid-column: 2;
+         
+      
+     }
+     #im-crew{
+         position: absolute;
+         margin-left: 250px;
+         bottom: 0px;
+         left: 50%;
+
+     }
+ 
  }
 
  /* global */

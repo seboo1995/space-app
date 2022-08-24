@@ -14,7 +14,7 @@ const Crew = () => {
       const intervalRef = setInterval(function () {
         let nextIndex = (currentPersonID + 1) % 4;
         changeSrc(nextIndex);
-      }, 2000);
+      }, 2500);
 
       return () => clearInterval(intervalRef);
     },

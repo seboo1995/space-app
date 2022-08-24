@@ -13,7 +13,7 @@ const Destination = () => {
       let nextIndex =  (( destID+ 1) % 4)
       changeSrc(nextIndex)
 
-     },2000)
+     },2500)
 
       return () => clearInterval(intervalRef)
   },[destID])

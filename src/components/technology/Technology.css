@@ -161,22 +161,10 @@
 
 
  /* desktop */
- @media screen and (min-device-width: 1024px) and (max-device-width: 2040px)  {
+ @media screen and (min-device-width: 1440px) {
     .technology-container{
        background: url(../../assets/technology/background-technology-desktop.jpg);
     }
-    /* .grid-container{
-
-        display: grid;
-        grid-template-columns:  1fr minmax(auto);
-        grid-template-rows: repeat(6 minmax(1fr, auto));
-
-        grid-gap:1em;
-        justify-content:center;
-        align-content: center;
-
-    } */
-
     .grid-container {
 
         display:grid;
@@ -184,9 +172,6 @@
         margin-top:80px;
         grid-template-columns: 0.5fr 2fr 2fr;
         grid-template-rows: 1fr 2fr;
-        /* grid-template-columns: repeat(auto-fit,minmax(2,1fr)); */
-        /* grid-template-rows: repeat(auto-fit,minmax(2,1fr)); */
-        
         grid-column-gap: 2em;
         grid-row-gap:2em;
         position:relative;
@@ -258,6 +243,92 @@
 
     
 
+ }
+ @media screen and (min-device-width: 1024px) and (max-device-width: 1439px) {
+    .technology-container{
+        background: url(../../assets/technology/background-technology-desktop.jpg);
+     }
+     .grid-container {
+
+        display:grid;
+        grid-gap:2em;
+        margin-top:80px;
+        grid-template-columns: 0.5fr 2fr 2fr;
+        grid-template-rows: 1fr 2fr;
+        grid-column-gap: 2em;
+        grid-row-gap:2em;
+        position:relative;
+    
+    }
+
+    .title-tab-tech{
+        grid-column: 1/3;
+        margin-top: 45px;
+        margin-left:8rem;
+        
+    }
+    .title-tab-tech p{
+        display:inline;
+        color:grey;
+    }   
+    .number-button-tech{
+        grid-row: 2/2;
+        grid-column: 1;
+        
+        margin-left: 4rem;
+    }
+
+    .description-tab-tech{
+        grid-column:2;
+        grid-row:2;
+        
+        margin-left:4rem;
+    }
+    .description-tab-tech h4{
+        font-size:12px;
+        text-transform: uppercase;
+
+    }
+    .description-tab-tech h3{
+        font-size:50px;
+        text-transform: uppercase;
+    }
+
+    .technology-container button:first-child {
+        background-color: #fff;
+        color:black;
+    }
+    .technology-container button{
+        display:block;
+        width:50px;
+        height:50px;
+        color: #fff;
+        border-radius: 50%;
+        text-align:center;
+        text-decoration:none;
+        background: transparent;
+        box-shadow: 0 0 3px gray;
+        margin: 25%;
+        font-size: 25px;
+    }
+    .tech-button-active{
+        background-color: #fff;
+        color:black;
+        height: 40px;
+        
+        }    
+        #im-tech{
+     
+            height: 400px;
+            width: 400px;
+        }
+        .image-tab-tech{
+            grid-column: 3;
+            grid-row: 2;
+            margin-top: -120px;
+            margin-left: 100px;
+            
+        }
  }
 
 .technology-container{

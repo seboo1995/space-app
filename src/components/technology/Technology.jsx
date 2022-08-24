@@ -12,7 +12,7 @@ const Technology = () => {
       const intervalRef = setInterval(function () {
         let nextIndex = (techID + 1) % all_technologies.length;
         changeSrc(nextIndex);
-      }, 2000);
+      }, 2500);
 
       return () => clearInterval(intervalRef);
     },
@@ -42,7 +42,7 @@ const Technology = () => {
       <div className="title-tab-tech ">
         <h2>
           {" "}
-          <p> 03 </p> SPACE LAUNCH 101{" "}
+          <p> 03 &nbsp;</p>SPACE LAUNCH 101 {" "}
         </h2>
       </div>
       {/* Second Row */}
