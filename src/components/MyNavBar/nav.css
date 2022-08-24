@@ -1,3 +1,4 @@
+
 .header-bar{   
   background: transparent;
   width: 100%;
@@ -6,6 +7,13 @@
   height: 80px;
 
   }
+
+.hor-line-nav{
+  color: white;
+  margin-top: 45px;
+  width: 48%;
+  margin-left: 150px;
+}
 .active_tab{
   border-bottom: 4px solid #D0D6F9;
   line-height: 1em;
@@ -21,12 +29,12 @@
       display: flex;
       flex-direction: row;
       background-color: rgb(208, 214, 249,0.2);
-      padding-right:200px;
-      padding-top:20px;
-      padding-bottom: 20px;
+      padding-right:120px;
+      margin-bottom: 20px;
+      margin-top: -55px;
       float: right;
       list-style: none;
-      line-height: 80px;
+      line-height: 75px;
       }
       .menu ul li{
       margin: 0 20px;
@@ -97,6 +105,26 @@
                }
 
 
+@media only screen and (min-device-width:1024px) and (max-device-width:1439px){
+  .menu ul{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(208, 214, 249,0.2);
+    padding-right:10px;
+    margin-top: -55px;
+    float: right;
+    list-style: none;
+    line-height: 75px;
+    }
+    .hor-line-nav{
+
+      color: white;
+      margin-top: 45px;
+      width: 35%;
+      margin-left: 110px;
+    }
+}
+
 /* tablet nav  */
 @media only screen and (min-device-width: 820px) and (max-device-width: 1023px) {
   .header-bar{   
@@ -107,6 +135,9 @@
     margin-bottom:50px;
     height: 80px;
   
+    }
+    .hor-line-nav{
+      display: none;
     }
   
   .active_tab{
@@ -221,7 +252,10 @@
               min-height: 100vh;
               display: none;
             }
-           
+            .hor-line-nav{
+              display: none;
+            }
+          
             .change_nav_background{
             background-color: rgb(208, 214, 249,0.2);
             }

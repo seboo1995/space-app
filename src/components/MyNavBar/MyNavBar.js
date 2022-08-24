@@ -61,31 +61,37 @@ export const MyNavBar = () => {
                 <div className="logo">
                     <a href='#'> <img src={logo} /> </a>
                 </div>
+               
                 <input type="checkbox" id="toggle-btn" ref={label_ref}/>
+                
                 <label className="menuicon" htmlFor="toggle-btn" >
                     <span className="bars"></span>
+                    
                 </label>
+                <div className='hor-line-nav'>
+                    <hr />
+                </div>
                 <div className="menu">
                     <ul ref={target_tab_ref} onClick={close_ham}>
                         <li >
                             <Link to="/home" onClick={check_tab}>
-                               <p id='nav-bar-num'>00</p>Home
+                               <p id='nav-bar-num'>00 &nbsp;</p>Home
                             </Link>
                         </li>
 
                         <li>
                             <Link to="/destination"onClick={check_tab} >
-                               <p id='nav-bar-num'> 01</p>Destination
+                               <p id='nav-bar-num'> 01 &nbsp;</p>Destination
                             </Link>
                         </li>
                         <li>
                             <Link to="/crew" onClick={check_tab}>
-                                <p id='nav-bar-num'>02</p>Crew
+                                <p id='nav-bar-num'>02 &nbsp;</p>Crew
                             </Link>
                         </li>
                         <li>
                             <Link to="/technology" onClick={check_tab}>
-                                <p id='nav-bar-num'>03</p>Technology
+                                <p id='nav-bar-num'>03 &nbsp;</p>Technology
                             </Link>
                         </li>
                     </ul>
